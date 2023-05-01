@@ -1,0 +1,29 @@
+class Solution {
+public:
+    double average(vector<int>& salary) {
+        int min=salary[0];
+        int max=salary[0];
+        int n=salary.size();
+        for(int i=0;i<n;i++)
+        {
+            if(salary[i]<min)
+            {
+            min=salary[i];
+            }
+
+            if(salary[i]>max)
+            {
+                max=salary[i];
+            }
+        }
+        double sum=0;
+        for(int i=0;i<n;i++)
+         
+        {
+            sum=sum+salary[i];
+        }
+        sum=sum-max-min;
+        return( sum/(n-2));
+    }
+
+};
